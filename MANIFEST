@@ -10,6 +10,6 @@ t/manifest.t
 t/pod-coverage.t
 t/pod.t
 t/version.t
-t/CoventryCathedral.jpg
-t/decoration.jpg
+t/CoventryCathedral.png
+t/decoration.png
 
