@@ -14,16 +14,16 @@ use Image::Square;
 
 # Hashes of visually tested images
 my %hash = (
-    'hor_square'   => '370f26d5fbc52ae93b1bd0928e38cd24',
-    'hor_left'     => '807f6263746b7646f172b7b0928d9195',
-    'hor_right'    => '65672407acff93b188d24bc9b0003bd7',
-    'ver_square'   => 'c9958ec55ef446c41fdecb71b2c69d09',
-    'ver_top'      => '024a3f36e32f1ad193e761b315e7be4c',
-    'ver_bottom'   => 'aea5e4120e8459b226ea003a0d57a2b4',
+    'hor_square'   => '2fd6c32b1f76518800283c196ed67262',
+    'hor_left'     => '9a7360d94551f1a65ac7a574a688d7e1',
+    'hor_right'    => 'bf4f292694fed8ae230ce946c5fc3c92',
+    'ver_square'   => '875febb115891ee3e57f399f46f2cd75',
+    'ver_top'      => 'c15bd1a20657ccb4026c838bc0bc88cb',
+    'ver_bottom'   => '10680482610d168be928770792e70aeb',
 );
 
 # Test horizontal iamge
-my $image = Image::Square->new('t/CoventryCathedral.jpg');
+my $image = Image::Square->new('t/CoventryCathedral.png');
 
 ok ($image, 'Instantiation');
 
@@ -38,14 +38,14 @@ ok ($square1->width == $square1->height, 'Image is square from horizontal');
 
 ok ( 100 == $square2->width && 100 == $square2->height, 'Correct resize from horizontal');
 
-ok ( md5_hex($square2->jpeg(50)) eq $hash{'hor_square'}, 'Correct centre image from horizontal');
+ok ( md5_hex($square2->png(5)) eq $hash{'hor_square'}, 'Correct centre image from horizontal');
 
-ok ( md5_hex($square3->jpeg(50)) eq $hash{'hor_left'}, 'Correct left image from horizontal');
+ok ( md5_hex($square3->png(5)) eq $hash{'hor_left'}, 'Correct left image from horizontal');
 
-ok ( md5_hex($square4->jpeg(50)) eq $hash{'hor_right'}, 'Correct right image from horizontal');
+ok ( md5_hex($square4->png(5)) eq $hash{'hor_right'}, 'Correct right image from horizontal');
 
 # Test vertical iamge
-$image = Image::Square->new('t/decoration.jpg');
+$image = Image::Square->new('t/decoration.png');
 
 diag('Testing vertical image');
 
@@ -58,11 +58,11 @@ ok ($square5->width == $square5->height, 'Image is square from vertical');
 
 ok ($square6->width == 100 && $square6->height == 100, 'Correct resize from vertical');
 
-ok ( md5_hex($square6->jpeg(50)) eq $hash{'ver_square'}, 'Correct centre image from vertical');
+ok ( md5_hex($square6->png(5)) eq $hash{'ver_square'}, 'Correct centre image from vertical');
 
-ok ( md5_hex($square7->jpeg(50)) eq $hash{'ver_top'}, 'Correct top image from vertical');
+ok ( md5_hex($square7->png(5)) eq $hash{'ver_top'}, 'Correct top image from vertical');
 
-ok ( md5_hex($square8->jpeg(50)) eq $hash{'ver_bottom'}, 'Correct bottom image from vertical');
+ok ( md5_hex($square8->png(5)) eq $hash{'ver_bottom'}, 'Correct bottom image from vertical');
 
 done_testing;
 
