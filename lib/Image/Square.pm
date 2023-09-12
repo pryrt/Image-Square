@@ -5,7 +5,7 @@ use warnings;
 use Carp ('croak');
 use GD;
 
-our $VERSION = '0.01_2';
+our $VERSION = '0.01_3';
 
 GD::Image->trueColor(1);
 
@@ -81,6 +81,10 @@ Image::Square - Crop and resize an image to create a square image
 
 The C<Image::Square> module provides a simple way to crop and resize an image to create a square image. This can be useful when you need to prepare images for applications that require square thumbnails or avatars.
 
+=head1 ERROR HANDLING
+
+C<Image::Square> will C<croak> if it detects a problem.
+
 =head1 METHODS
 
 =head2 new
@@ -136,6 +140,10 @@ L<https://rt.cpan.org/NoAuth/Bugs.html?Dist=Image-Square>
 =item * Search CPAN
 
 L<https://metacpan.org/release/Image::Square>
+
+=item * GitHub
+
+L<https://github.com/IanBod/Image-Square>
 
 =back
 
