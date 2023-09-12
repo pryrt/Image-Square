@@ -1,0 +1,8 @@
+Revision history for Image-Square
+
+0.01_2  7th September 2023
+	Added tests to check generated images against hashes of visually tested images.
+
+0.01_1  6th September 2023
+        First version, released on an unsuspecting world.
+
