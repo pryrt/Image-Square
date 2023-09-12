@@ -1,8 +1,12 @@
 Revision history for Image-Square
 
+0.01_3  12th September 2023
+	- The previous tests failed due to the GD->jpeg method not being consistent across Perl versions.  Now we are using PNG images instead as these should be more consistent!
+	- Added 'Error Handling' section to POD and reference to the GitHub repository.
+
 0.01_2  7th September 2023
-	Added tests to check generated images against hashes of visually tested images.
+	- Added tests to check generated images against hashes of visually tested images.
 
 0.01_1  6th September 2023
-        First version, released on an unsuspecting world.
+        - First version, released on an unsuspecting world.
 
