@@ -23,7 +23,7 @@ my %hash = (
 );
 
 # Test horizontal iamge
-my $image = Image::Square->new('t/CoventryCathedral.png');
+my $image = Image::Square->new('t/CoventryCathedral.bmp');
 
 ok ($image, 'Instantiation');
 
