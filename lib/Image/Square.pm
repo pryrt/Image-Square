@@ -5,7 +5,7 @@ use warnings;
 use Carp ('croak');
 use GD;
 
-our $VERSION = '0.01_3';
+our $VERSION = '0.01_4';
 
 GD::Image->trueColor(1);
 
