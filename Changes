@@ -1,5 +1,8 @@
 Revision history for Image-Square
 
+0.01_4  13th September 2023
+	- Tests still fail on different builds of GD.  Now using PNG as input image and native GD format for output.
+
 0.01_3  12th September 2023
 	- The previous tests failed due to the GD->jpeg method not being consistent across Perl versions.  Now we are using PNG images instead as these should be more consistent!
 	- Added 'Error Handling' section to POD and reference to the GitHub repository.
