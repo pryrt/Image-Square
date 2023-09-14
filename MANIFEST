@@ -6,10 +6,11 @@ README
 t/00-load.t
 t/01-files.t
 t/02-image.t
+t/03-horiz-3x1.t
+t/04-vert-1x3.t
 t/manifest.t
 t/pod-coverage.t
 t/pod.t
 t/version.t
-t/CoventryCathedral.png
-t/decoration.png
-
+t/3x1.png
+t/1x3.png
