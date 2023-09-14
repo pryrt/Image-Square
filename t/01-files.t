@@ -8,7 +8,7 @@ plan tests => 4;
 
 use Image::Square;
 
-my $image = Image::Square->new('t/CoventryCathedral.png');
+my $image = Image::Square->new('t/3x1.png');
 
 ok ($image, 'Instantiation');
 
