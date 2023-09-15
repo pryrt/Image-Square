@@ -30,6 +30,9 @@ jobs:
           - perl: '5.38'
             os: 'ubuntu-latest'
             coverage: true
+          - perl: '5.32'
+            os: 'ubuntu-latest'
+            libgd: 1.01
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -49,9 +52,18 @@ jobs:
         if: ${{ matrix.perl < '5.14' }}
         run: |
             cpanm --notest ExtUtils::MakeMaker
-      - name: Install libgd on linux
-        if: ${{ startsWith(matrix.os, 'ubuntu') }}
+      - name: Look for specific libgd on linux (optional)
+        if: ${{ startsWith(matrix.os, 'ubuntu') && matrix.libgd }}
         run : |
+            echo looking for specific libgd v${{ matrix.libgd }}
+            sudo apt list -a libgd-dev
+            sudo apt list -a libgd-tools
+            sudo apt-get update -y
+            sudo apt-get install -y libgd-dev libgd-tools
+      - name: Install libgd on linux
+        if: ${{ startsWith(matrix.os, 'ubuntu') && !matrix.libgd }}
+        run : |
+            echo just getting standard libgd
             sudo apt-get update -y
             sudo apt-get install -y libgd-dev libgd-tools
       - name: Run Makefile.PL and get prereqs
